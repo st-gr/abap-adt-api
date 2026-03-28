@@ -325,10 +325,16 @@ export class AdtHTTP {
     if (!headers["Cookie"] && runningInNode)
       headers["Cookie"] = this.ascookies()
 
+    // Always include sap-client in query params (some systems require it on every request)
+    const qs = { ...options.qs }
+    if (this.client && !qs["sap-client"]) qs["sap-client"] = this.client
+    if (this.language && !qs["sap-language"]) qs["sap-language"] = this.language
+
     adtRequestNumber++
     const adtStartTime = new Date()
     const config = {
       ...options,
+      qs,
       auth: this.auth,
       headers,
       adtStartTime,

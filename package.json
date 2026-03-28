@@ -1,7 +1,7 @@
 {
-  "name": "abap-adt-api",
-  "version": "7.1.1",
-  "description": "Interface to Abap Developer Tools webservice",
+  "name": "@st-gr/abap-adt-api-patched",
+  "version": "7.1.1-patched.1",
+  "description": "Patched fork of abap-adt-api with sap-client/sap-language, lock URL fix, and Content-Type fix",
   "outDir": "build",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -15,11 +15,11 @@
     "ABAP",
     "ADT"
   ],
-  "author": "Marcello Urbani",
+  "author": "Marcello Urbani (original), st-gr (patches)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/marcellourbani/abap-adt-api"
+    "url": "https://github.com/st-gr/abap-adt-api"
   },
   "dependencies": {
     "axios": "^1.7.2",
